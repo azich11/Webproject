@@ -1,0 +1,145 @@
+<?php 
+
+$host="localhost";
+$user="root";
+$password="";
+$db="pro";
+
+mysql_connect($host,$user,$password);
+mysql_select_db($db);
+
+if(isset(['uname'])){
+  
+  $uname=$_POST['uname'];
+  $password=$POST['psw'];
+
+  $sql="select * from logingorm where user='".$uname."'AND Pass='".$password."' limit 1 ";
+
+  $result=mysql_query($sql);
+
+  if(mysql_num_rows($result==1)){
+    echo " You Have Successfully logged in";
+    exit();
+  }
+  else{
+    echo " You Have Entered Incorrect Password";
+    exit();
+  }
+
+}
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Одежда</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body > 
+
+<ul class="sidenav">
+  <li><a  class="active" href="index.html">Home</a></li>
+  <li><a href="man.html">Мужчинам</a></li>
+  <li><a href="women.html">Женщинам</a></li>
+  <li><a href="#contact">Детям</a></li>
+  <li><a href="#about">Обувь</a></li>
+  <li><a href="#contact">Аксессуары</a></li>
+  <li><a href="#contact">Спорт</a></li>
+  <li><a href="#contact">Моя Корзина</a></li>
+  <li><a href="dobav.html">Добавить одежду</a></li>
+  <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form method="POST" class="modal-content animate" action="#">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div></a></li>
+  <li><form>
+  <input type="text" name="search" placeholder="Search..">
+</form></li>
+
+<li><button onclick="document.getElementById('id011').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id011" class="modal1">
+  <span onclick="document.getElementById('id011').style.display='none'" class="close1" title="Close Modal1">×</span>
+  <form class="modal-content animate1" action="/action_page.php">
+    <div class="container1">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <input type="checkbox" checked="checked"> Remember me
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a></p>
+
+
+
+      <div class="clearfix1">
+        <button type="button" onclick="document.getElementById('id011').style.display='none'" class="cancelbtn1">Cancel</button>
+        <button type="submit" class="signupbtn1">Sign Up</button>
+      </div>
+    </div>
+  </form></div></li>
+</div>
+  
+</ul>
+
+<div class="content">
+	<div class="img"><a><img src="img/1.gif"></a></div>
+	<div> <a><img src="img/2.jpg"></a><a><img src="img/3.jpg"></a></div>
+	<div class="img"><a><img src="img/4.gif"></a></div>
+	<div class="img"><a><img src="img/5.jpg"></a></div>
+  <h2 STYLE="color:red;">У нас СКИДКИ!!!</h2>
+ 
+</div>
+
+
+  
+  <script type="text/javascript">
+    
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+var modal = document.getElementById('id011');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal1) {
+        modal.style.display1 = "none";
+    }
+}
+
+  </script>
+</body>
+</html>

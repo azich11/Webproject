@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="sidenav">
+  <a  class="active" href="index.html">Home</a>
+  <a href="man.html">Мужчинам</a>
+  <a href="women.html">Женщинам</a>
+  <a href="#contact">Детям</a>
+  <a href="#about">Обувь</a>
+  <a href="#contact">Аксессуары</a>
+  <a href="#contact">Спорт</a>
+  <a href="#contact">Моя Корзина</a>
+  <a href="dobav.html">Добавить одежду</a>
+  <input type="text" name="search" placeholder="Поиск">
+</div>
+<main>
+  
+     <section class="plp">
+      <div><img id="mainImg" src="img/7.jpg"></div>
+      <div class="col1">
+        <h3 id="title">T-Shirt, United Colors of Benetton</h3>
+        <h1 id="price">8 470 тг.</h1>
+        <span class="fgh">+ Доп. скидка 5% по промокоду</span><br><br>
+        <span><span id="span1" class="kk">Артикул:</span><span id="s2">4724640</span></span><br><br>
+        <span><span class="kk">Цвет:</span> <span id="s1">Серый</span></span><br><br>
+        <span><span class="kk">Состав:</span> хлопок 100%</span><br><br>
+        <div id="images"><img onclick="a1()" id="image1" class="qws" src="img/7.jpg"><img onclick="a2()" id="image2"  class="qws" src="img/16.jpg"><img onclick="a3()" id="image3" class="qws" src="img/15.jpg"></div>
+
+        <div class="ch1"><button class="sizebut">XS</button><button class="sizebut">S</button><button class="sizebut">M</button><button class="sizebut">L</button><button class="sizebut">XL</button></div>
+        <div><button class="vk1">В Корзину</button></div>
+      </div>
+    </section>
+  
+  
+</main>
+
+<script >
+
+  //document.querySelector('#image1').addEventListener('click',a1);
+  function a1(event) {
+    a=document.querySelector("#image1");
+     document.querySelector('#mainImg').src=a.src;
+     document.querySelector("#price").textContent="8 470 тг";
+     document.querySelector("#title").textContent="T-Shirt, United Colors of Benetton";
+      document.querySelector("#s1").textContent="Серый";
+      document.querySelector("#s2").textContent="3514980";
+  
+}
+//document.querySelector('#image2').addEventListener('click',a2);
+  function a2(event) {
+    a=document.querySelector("#image2");
+     document.querySelector('#mainImg').src=a.src;
+     document.querySelector("#price").textContent="8 990 тг";
+     document.querySelector("#title").textContent="T-Shirt, Fight Club";
+     document.querySelector("#s1").textContent="Черный";
+      document.querySelector("#s2").textContent="5219840";
+  
+}
+//document.querySelector('#image3').addEventListener('click',a3);
+  function a3(event) {
+    a=document.querySelector("#image3");
+     document.querySelector('#mainImg').src=a.src;
+     document.querySelector("#price").textContent="6 990 тг";
+     document.querySelector("#title").textContent="T-Shirt, White";
+     document.querySelector("#s1").textContent="Белый";
+      document.querySelector("#s2").textContent="4504521";
+  
+}
+</script>
+</body>
+
+</html>
